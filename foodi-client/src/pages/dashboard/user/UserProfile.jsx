@@ -1,9 +1,11 @@
 import React, { useContext } from 'react'
 import { AuthContext } from '../../../contexts/AuthProvider'
 import { useForm } from 'react-hook-form';
+import { useTheme } from '../../../hooks/ThemeContext';
 
 const UserProfile = () => {
     const {updateUserProfile} = useContext(AuthContext);
+    const { isDarkMode } = useTheme();
     const {
         register,
         handleSubmit,
@@ -29,13 +31,13 @@ const UserProfile = () => {
           <label className="label">
             <span className="label-text">Name</span>
           </label>
-          <input type="text" {...register("name")} placeholder="Your name" className="input input-bordered" required />
+          <input type="text" {...register("name")} placeholder="Your name" className={`text-${isDarkMode ? 'black' : 'dark'} input input-bordered`} required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Upload Photo</span>
           </label>
-          <input type="file" {...register("photoURL")}  className="file-input w-full mt-1" />
+          <input type="file" {...register("photoURL")}  className={`text-${isDarkMode ? 'black' : 'dark'} file-input w-full mt-1`} />
           {/* <input type="text" {...register("photoURL")} placeholder="photo url" className="input input-bordered" required /> */}
         </div>
         <div className="form-control mt-6">

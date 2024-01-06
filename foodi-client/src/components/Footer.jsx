@@ -15,21 +15,21 @@ const Footer = () => {
           </p>
         </aside>
         <nav>
-          <header className="footer-title text-black">Useful links</header>
+          <header className={`footer-title text-${isDarkMode ? 'white' : 'black'}`}>Useful links</header>
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Events</a>
           <a className="link link-hover">Blogs</a>
           <a className="link link-hover">FAQ</a>
         </nav>
         <nav>
-          <header className="footer-title">Main Menu</header>
+          <header className={`footer-title text-${isDarkMode ? 'white' : 'black'}`}>Main Menu</header>
           <a className="link link-hover">Home</a>
           <a className="link link-hover">Offers</a>
           <a className="link link-hover">Menus</a>
           <a className="link link-hover">Reservation</a>
         </nav>
         <nav>
-          <header className="footer-title">Contact Us</header>
+          <header className={`footer-title text-${isDarkMode ? 'white' : 'black'}`}>Contact Us</header>
           <a className="link link-hover">info@clusterglobals.com</a>
           <a className="link link-hover">+91 95743 62154</a>
           <a className="link link-hover">Social media</a>

@@ -4,12 +4,13 @@ import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../contexts/AuthProvider";
 import useAxiosPublic from "../hooks/useAxiosPublic";
+import { useTheme } from "../hooks/ThemeContext";
 
 const Modal = () => {
   const [errorMessage, seterrorMessage] = useState("");
   const { signUpWithGmail, login } = useContext(AuthContext);
   const axiosPublic = useAxiosPublic();
-
+  const { isDarkMode } = useTheme();
   // modal close button
   const [isModalOpen, setIsModalOpen] = useState(true); 
   const closeModal = () => {
@@ -87,7 +88,7 @@ const Modal = () => {
             method="dialog"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <h3 className="font-bold text-lg">Please Login!</h3>
+            <h3 className={`text-${isDarkMode ? 'black' : 'dark'} font-bold text-lg`}>Please Login!</h3>
 
             {/* email */}
             <div className="form-control">
@@ -97,7 +98,7 @@ const Modal = () => {
               <input
                 type="email"
                 placeholder="email"
-                className="input input-bordered"
+                className={`text-${isDarkMode ? 'black' : 'dark'} input input-bordered`}
                 {...register("email")}
               />
             </div>
@@ -110,7 +111,7 @@ const Modal = () => {
               <input
                 type="password"
                 placeholder="password"
-                className="input input-bordered"
+                className={`text-${isDarkMode ? 'black' : 'dark'} input input-bordered`}
                 {...register("password", { required: true })}
               />
               <label className="label">
@@ -141,7 +142,7 @@ const Modal = () => {
             {/* close btn */}
             <div
               htmlFor="my_modal_5"
-              className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              className={`btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-${isDarkMode ? 'black' : 'dark'}`}
               onClick={() => document.getElementById("my_modal_5").close()}
             >
               ✕
