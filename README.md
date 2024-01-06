@@ -1,5 +1,5 @@
 ﻿# complete-mern-project
-![complete-mern-project](/cover-image.png)
+
 
 ## Table of Contents
 - [Install](#install)
