@@ -7,13 +7,14 @@ import { AuthContext } from "../contexts/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../hooks/useAxiosPublic";
+import { useTheme } from "../hooks/ThemeContext";
 
 const Signup = () => {
   const { signUpWithGmail, createUser, updateUserProfile } =
     useContext(AuthContext);
 
     const axiosPublic = useAxiosPublic();
-
+  const { isDarkMode } = useTheme();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -87,7 +88,7 @@ const Signup = () => {
             <input
               type="name"
               placeholder="Your name"
-              className="input input-bordered"
+              className={`text-${isDarkMode ? 'black' : 'dark'} input input-bordered`}
               {...register("name")}
             />
           </div>
@@ -100,7 +101,7 @@ const Signup = () => {
             <input
               type="email"
               placeholder="email"
-              className="input input-bordered"
+              className={`text-${isDarkMode ? 'black' : 'dark'} input input-bordered`}
               {...register("email")}
             />
           </div>
@@ -113,7 +114,7 @@ const Signup = () => {
             <input
               type="password"
               placeholder="password"
-              className="input input-bordered"
+              className={`text-${isDarkMode ? 'black' : 'dark'} input input-bordered`}
               {...register("password")}
             />
             <label className="label">

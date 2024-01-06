@@ -36,7 +36,7 @@ const Order = () => {
         <div className="py-28 flex flex-col items-center justify-center">
           {/* content */}
           <div className=" text-center px-4 space-y-7">
-            <h2 className="md:text-5xl text-4xl font-bold md:leading-snug leading-snug">
+            <h2 className="md:text-5xl text-4xl font-bold md:leading-snug leading-snug text-black">
               Track Your All<span className="text-green"> Orders</span>
             </h2>
           </div>

@@ -46,17 +46,17 @@ const Navbar = () => {
       <li tabIndex={0}>
         <details>
           <summary className={`text-${isDarkMode ? 'dark' : 'black'}`}>Menu</summary>
-          <ul className={`p-2 ${isDarkMode ? 'dark' : ''}`}>
+          <ul className={`p-2 ${isDarkMode ? isSticky ? "black shadow-md bg-base-100 transition-all duration-300 ease-in-out" : "dark" : 'black'}`}>
             <li>
-              <a href="/menu" className={`text-${isDarkMode ? 'dark' : ''}`}>
+              <a href="/menu" className={`text-${isDarkMode ? 'dark' : 'black'}`}>
                 All
               </a>
             </li>
             <li>
-              <a className={`text-${isDarkMode ? 'dark' : 'dark'}`}>Salad</a>
+              <a className={`text-${isDarkMode ? 'dark' : 'black'}`}>Salad</a>
             </li>
             <li>
-              <a className={`text-${isDarkMode ? 'dark' : 'dark'}`}>Pizza</a>
+              <a className={`text-${isDarkMode ? 'dark' : 'black'}`}>Pizza</a>
             </li>
           </ul>
         </details>
@@ -64,21 +64,21 @@ const Navbar = () => {
       <li tabIndex={0}>
         <details>
           <summary className={`text-${isDarkMode ? 'dark' : 'black'}`}>Services</summary>
-          <ul className={`p-2 ${isDarkMode ? 'dark' : ''}`}>
+          <ul className={`p-2 ${isDarkMode ? isSticky ? "black shadow-md bg-base-100 transition-all duration-300 ease-in-out" : "dark" : 'black'}`}>
             <li>
-              <a className={`text-${isDarkMode ? 'text-white' : 'dark'}`}>Online Order</a>
+              <a className={`text-${isDarkMode ? 'dark' : 'black'}`}>Online Order</a>
             </li>
             <li>
-              <a className={`text-${isDarkMode ? 'white' : 'dark'}`}>Table Booking</a>
+              <a className={`text-${isDarkMode ? 'dark' : 'black'}`}>Table Booking</a>
             </li>
             <li>
-              <a className={`text-${isDarkMode ? 'white' : 'dark'}`}>Order Tracking</a>
+              <a className={`text-${isDarkMode ? 'dark' : 'black'}`}>Order Tracking</a>
             </li>
           </ul>
         </details>
       </li>
       <li>
-        <a className={`text-${isDarkMode ? 'white' : 'black'}`}>Offers</a>
+        <a className={`text-${isDarkMode ? 'dark' : 'black'}`}>Offers</a>
       </li>
     </>
   );
