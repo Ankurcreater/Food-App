@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿# complete-mern-project
 
 
@@ -79,3 +80,6 @@ This project exists thanks to my youtube audience who contribute.
 
 [MIT](LICENSE) © Darshan Vasani
 
+=======
+# Food-App
+>>>>>>> 0d4e4ac8496c0e23d145700adffe583d687e8490
