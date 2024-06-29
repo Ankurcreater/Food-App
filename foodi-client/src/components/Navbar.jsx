@@ -44,19 +44,19 @@ const Navbar = () => {
         </a>
       </li>
       <li tabIndex={0}>
-        <details>
+        <details  className={`text-${isDarkMode ? '' : 'bg-white'}`}>
           <summary className={`text-${isDarkMode ? 'dark' : 'black'}`}>Menu</summary>
-          <ul className={`p-2 ${isDarkMode ? isSticky ? "black shadow-md bg-base-100 transition-all duration-300 ease-in-out" : "dark" : 'black'}`}>
+          <ul className={`p-2 ${isDarkMode ? isSticky ? "black shadow-md bg-white transition-all duration-300 ease-in-out" : "dark" : 'black'}`}>
             <li>
-              <a href="/menu" className={`text-${isDarkMode ? 'dark' : 'black'}`}>
+              <a href="/menu" className={`text-${isDarkMode ? 'dark' : 'black bg-white'}`}>
                 All
               </a>
             </li>
             <li>
-              <a className={`text-${isDarkMode ? 'dark' : 'black'}`}>Salad</a>
+              <a className={`text-${isDarkMode ? 'dark ' : 'black bg-white'}`}>Salad</a>
             </li>
             <li>
-              <a className={`text-${isDarkMode ? 'dark' : 'black'}`}>Pizza</a>
+              <a className={`text-${isDarkMode ? 'dark' : 'black bg-white'}`}>Pizza</a>
             </li>
           </ul>
         </details>
@@ -120,8 +120,19 @@ const Navbar = () => {
             </ul>
           </div>
           <a href="/">
-            <img src={logo} alt="" />
-          </a>
+  <img
+    src={logo}
+    alt=""
+    className={`logo ${isDarkMode ? "mix-blend-multiply " : "bg-white"}`}
+    
+  />
+</a>
+
+
+
+
+
+
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
