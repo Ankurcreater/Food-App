@@ -62,24 +62,3 @@ ACCESS_TOKEN_SECRET = jwt_secret_token
 PAYMENT_SECRET_KEY = stripe_secret_key
 ```
 
-## Usage
-
-This is only a documentation package. You can print out [spec.md](spec.md) to your console:
-
-```sh
-$ standard-readme-spec
-# Prints out the standard-readme spec
-```
-
-### Contributors
-
-This project exists thanks to my youtube audience who contribute. 
-
-
-## License
-
-[MIT](LICENSE) © Darshan Vasani
-
-=======
-# Food-App
->>>>>>> 0d4e4ac8496c0e23d145700adffe583d687e8490
